@@ -1,0 +1,25 @@
+{
+  "name": "pkg-test",
+  "version": "1.0.0",
+  "description": "esperimenti e prove con pkg",
+  "main": "./build/main.js",
+  "bin": "./build/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && pkg -t node10-win-x64,node10-linux-x64 --out-path ./dist/ ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "@types/node": "^10.12.30",
+    "@types/fs-extra": "^7.0.0",
+    "delay": "^4.3.0",
+    "fs-extra": "^8.0.1",
+    "guid-typescript": "^1.0.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:iae-lab/fv-pkg-test.git"
+  }
+}
