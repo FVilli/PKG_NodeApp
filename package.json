@@ -14,11 +14,14 @@
     "pkg": "^4.4.0"
   },
   "dependencies": {
-    "@types/node": "^10.12.30",
+    "@types/express": "^4.17.0",
     "@types/fs-extra": "^7.0.0",
+    "@types/node": "^10.12.30",
     "delay": "^4.3.0",
+    "express": "^4.17.1",
     "fs-extra": "^8.0.1",
-    "guid-typescript": "^1.0.9"
+    "guid-typescript": "^1.0.9",
+    "open": "^6.3.0"
   },
   "repository": {
     "type": "git",

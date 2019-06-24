@@ -3,6 +3,9 @@ import * as path from 'path'
 import * as fs from 'fs-extra';
 import { Guid } from "guid-typescript";
 import { ISettings, ICtx } from './interfaces';
+import * as open from 'open';
+import * as  express from 'express';
+
 class Main {
     private static settings:ISettings;
     private static ctx:ICtx;
@@ -15,6 +18,7 @@ class Main {
         this.settings = await this.getSettings();
         console.log(this.settings);
 
+        
         // console.log("----------------------------------------------------------");
 
         // console.log(await this.getPathInfo("./"));
@@ -33,6 +37,22 @@ class Main {
 
         // console.log(args[0].split("/"));
         // console.log(args[0].split("\\"));
+
+        let pid = "?";
+        const app = express();
+ 
+        app.get('/', function (req:any, res:any) {
+          res.send('Pid:' + pid)
+        })
+ 
+        const server = app.listen(3000);
+        const cp = await open("http://localhost:3000");
+
+        pid = cp.pid.toString();
+
+        while(true) {
+          await delay(1000);
+        }
       } 
       catch(err) {
         console.warn(err);
