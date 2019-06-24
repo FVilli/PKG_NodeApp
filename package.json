@@ -10,7 +10,9 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {},
+  "devDependencies": {
+    "pkg": "^4.4.0"
+  },
   "dependencies": {
     "@types/node": "^10.12.30",
     "@types/fs-extra": "^7.0.0",
