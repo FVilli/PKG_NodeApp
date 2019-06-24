@@ -20,6 +20,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.com:iae-lab/fv-pkg-test.git"
+    "url": "https://github.com/FVilli/PKG_NodeApp"
   }
 }
